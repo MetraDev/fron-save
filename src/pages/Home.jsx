@@ -3,7 +3,7 @@ import {business, cities, role, roles, users, ideas, teams, urls,} from '../inde
 import './home.css'
 
 const home =()=>{
-    urls();
+    //urls();
     cities();
     business();
     ideas();

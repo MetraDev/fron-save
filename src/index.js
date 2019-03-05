@@ -16,7 +16,7 @@ import {actionTypesIdeas} from "./Redux/Reducers/ideas/ideasReducer";
 
 const store = createStore();
 export const urls =()=> {
-    let temp = store.getState().url
+    /*let temp = store.getState().url
 
     console.log('temp', temp)
     let temp2 = ''
@@ -30,7 +30,7 @@ export const urls =()=> {
         console.log('es false')
 
         return temp2 = 'http://52.213.25.226:3030'
-    }
+    }*/
 }
 
 export const URL = 'http://52.213.25.226:3030'
@@ -276,7 +276,7 @@ axios.get(`${URL}/businessmodel`,config)
     })
     .catch(err => console.log('No ha funcionado users', err));
 }
-urls();
+//urls();
 cities();
 business();
 ideas();
