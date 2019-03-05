@@ -6,6 +6,7 @@ import { token} from '../index'
 import AppRouter from "./AppRouter";
 import {addCities, addUser, chanegUrl, deleteCity, modCity, modTar, movNom} from "../actions/actions";
 import {connect} from "react-redux";
+import Register from "./Register";
 
 
 
@@ -19,7 +20,8 @@ class Login extends Component {
             password: "",
             strategy: "local",
             state:false,
-            estado:true
+            estado:true,
+            reg:false
         }
 
     }
@@ -69,18 +71,24 @@ class Login extends Component {
         });
     }
 
+    regist =()=>{
+        this.setState({reg:true})
+    }
 
 
 
 render() {
+    if(this.state.reg === true ) return (<Register/>)
         if(this.state.state === true){
             console.log('estamos dentro')
             return(<AppRouter/>)
         }else
+
        return(
 
 
            <div lang="en" dir="ltr">
+
                <title className={'h1'}>From Login | Metra </title>
                    <link rel="stylesheet" href="../master.css"/>
                    <body>
@@ -93,7 +101,7 @@ render() {
                            <input type="password" placeholder="Enter Password" name={"password"} value={this.state.password} onChange={this.introDatos}/>
                                <input type="submit"  onClick={()=> this.change() } value="Log In"/>
                                    <a href="" >Change your url</a>
-                       <br/>        <a href="#">Don´t have an account?</a>
+                       <br/>        <a href="#" onClick={()=>{this.regist()}}>Don´t have an account?</a>
                    </form>
                {this.state.estado ? '': <p className={'text-danger'}>Usuario o contraseña incorrectos, intentelo de nuevo</p>}
            </div>
