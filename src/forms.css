@@ -1,0 +1,48 @@
+
+.stilo input[type="text"]{
+
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.form-group input[type="text"]
+{
+
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+.divder {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+
+}
+.stilos {
+
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 100px;
+    color: #fff;
+    font-size: 16px;
+}
+.card-header{
+    outline: 2px solid #CB3066 ;
+
+}
+.navbar{
+   outline:2px solid #CB3066 ;
+
+}
+
+
