@@ -70,7 +70,6 @@
   "scripts": {
     "start": "node scripts/start.js ",
     "startapi": "export PUBLIC_URL=http://52.213.25.226:3030/ || SET \"PUBLIC_URL=http://52.213.25.226:3030/\" && node scripts/start.js",
-    "heroku-postbuild": "npm run start",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
