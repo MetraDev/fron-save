@@ -28,7 +28,8 @@ const reducer = (state = [], action) => {
             console.log('el actioon' , action.data);
             if(action.data !== action.data)
                 action.data += action.data
-            return [ ...state,...action.data];
+            state = action.data
+            return [...action.data];
 
         case actionTypes.deleteCity:
 

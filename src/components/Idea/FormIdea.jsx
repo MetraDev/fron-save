@@ -38,8 +38,11 @@ class FormIdea extends Component {
             .then(res => {
 
                 res.data.businessModelId = this.state.businessModelId
+                if(res.data.teamId){
                 res.data.teamId = this.state.teamId
                 res.data.teamId.cityId =this.state.teamId.cityId
+                    this.props.modIdeas(res.data,id)
+                }else
 
                 console.log('el estado', res.data)
                 this.props.modIdeas(res.data,id)

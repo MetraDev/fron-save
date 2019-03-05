@@ -32,9 +32,8 @@ const reducer = (state = [] , action) => {
 
         case actionTypesUser.createUser:
             console.log('ihoinobobnobojn'+action.data);
-            for (let index in action.data){
-                state.push(action.data[index])
-            }
+            
+            state = action.data
             return [ ...state];
 
 
