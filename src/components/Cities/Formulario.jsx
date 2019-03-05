@@ -111,21 +111,23 @@ class Formulario extends Component {
 
                 this.props.addUsers(n1,n1._id)
 
-                if(n2){
-                    n2.telephone =this.state.name
-                axios.put(`${URL}/user/${n2._id}`, n2, config)
-                    .then(res => {
 
-                        if(n2){
-
-
-                            this.props.addUsers(n2,n2._id)}
-
-                    })
-                    .catch(err => this.setState({err:true}) );}
 
             })
             .catch(err => console.log('no ha  funcionado',err) );}
+
+        if(n2){
+            n2.telephone =this.state.name
+            axios.put(`${URL}/user/${n2._id}`, n2, config)
+                .then(res => {
+
+                    if(n2){
+
+
+                        this.props.addUsers(n2,n2._id)}
+
+                })
+                .catch(err => this.setState({err:true}) );}
 
 
 
