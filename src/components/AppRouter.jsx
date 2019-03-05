@@ -39,7 +39,7 @@ class AppRouter extends Component{
 
 
     render(){
-        if(this.state.state === 'false' ){
+        if(this.state.state === 'false' ||this.state.state === null || this.state.state === 'null'  ){
             console.log('approuter ', localStorage.getItem('accesToken'))
             return(<Login/>)
 
